@@ -12,3 +12,7 @@ class Movie:
 
         if not isinstance(self.customer_age, int) or self.customer_age <= 0:
             raise ValueError("Age must be a positive integer")
+
+
+def movie_factory(name: str, customer_age: int) -> Movie:
+    return Movie(name=name, customer_age=customer_age)
